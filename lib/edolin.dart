@@ -31,7 +31,7 @@ class Edolin extends StatelessWidget{
     child:Edolins(path:path)));
 }
 class Edolins extends StatefulWidget{
-  final EOF='\$';
+  final EOF='\x1a';
   bool _killing=false;bool get killing=>_killing;set killing(f)=>_killing=f;
   int line=0,vmin=0,vmax=0;
   List<String>lines=<String>[],stacks=<String>[];
