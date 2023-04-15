@@ -11,20 +11,27 @@
 ## 環境
 * linux
 
-## 実行
-* % cd edolin
-* % flutter pub add  google_fonts scrollable_positioned_list
-* % echo test > todo
-* % flutter run
+## 実行例
+
+```
+% git clone https://github.com/maninov/edolin.git
+% flutter create edolin_sample
+% cp edolib/lib/* edolin_sample/lib
+% cd edolin_sample
+% flutter pub add  google_fonts scrollable_positioned_list
+% echo test > todo
+% flutter run
+```
 
 ## 使い方 (C-はCtrlキーを押しながらという表記です)
-* カーソル移動
+* 移動
 
 キー | 操作
 ----------------|-------------
 C-p,C-n,C-f,C-p | 上,下,左,右
 C-a,C-e | 先頭,末
 ESC-<,ESC->,C-v | ページ先頭,末,送り
+C-l | リフレッシュ
 
 * 編集
 
