@@ -16,7 +16,7 @@
 ```
 % git clone https://github.com/maninov/edolin.git
 % flutter create edolin_sample
-% cp edolib/lib/* edolin_sample/lib
+% cp edolin/lib/* edolin_sample/lib
 % cd edolin_sample
 % flutter pub add  google_fonts scrollable_positioned_list
 % echo test > todo
