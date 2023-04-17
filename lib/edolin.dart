@@ -92,9 +92,9 @@ class _Edolin extends State<Edolins>{
   }
   void shared_fb(int col){
     var ut=s.position.viewportDimension;
-    var tp=TextPainter(text:TextSpan(text:c.text.substring(0,(col<=c.text.length?col:c.text.length))),textDirection:TextDirection.ltr);
+    var tp=TextPainter(text:TextSpan(style:TextStyle(fontSize:Theme.of(context).primaryTextTheme.bodyText1!.fontSize),text:c.text.substring(0,(col<=c.text.length?col:c.text.length))),textDirection:TextDirection.ltr);
     tp.layout(maxWidth:double.infinity);
-    if(tp.width*2.0<s.position.maxScrollExtent){s.jumpTo(((tp.width*2.0)~/ut)*ut);}else{s.jumpTo(s.position.maxScrollExtent);}
+    if(tp.width<s.position.maxScrollExtent){s.jumpTo(((tp.width)~/ut)*ut);}else{s.jumpTo(s.position.maxScrollExtent);}    
     c.selection=TextSelection.fromPosition(TextPosition(offset:col));
   }
   @override Widget build(BuildContext context){
