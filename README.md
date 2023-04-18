@@ -1,17 +1,15 @@
 # edolin
 
-## 言語
+## language
+* dart language(flutter)
 
-* dart言語(flutter)
+## concept
+* I arranged the line editor (EDLIN), which is an internal command of MS-DOS, into a modern style (only the sound is covered with kotlin). The key bindings are emacs-like and implement only the bare minimum. Of course, it supports Japanese, and this README.md is also created with edolin. It is coded in about 250 lines.
 
-## 概要
-* MS-DOSの内部コマンドであるラインエディタ（EDLIN）を現代風にアレンジしてみました（音だけはkotlinにもかぶってます）。キーバインドは、emacsライクで必要最低限のものしか実装していません。もちろん日本語対応しており、本README.mdも、edolinで作成しています。
-※ 250行程度でコーディングされています。
-
-## 環境
+## environment
 * linux
 
-## 実行例
+##  execution example
 
 ```
 % git clone https://github.com/maninov/edolin.git
@@ -23,25 +21,26 @@
 % flutter run
 ```
 
-## 使い方 (C-はCtrlキーを押しながらという表記です)
-* 移動
+## usage ('C-' is notation while pressing Ctrl key)
+* cursor move
 
-キー | 操作
+key | action
 ----------------|-------------
-C-p,C-n,C-b,C-f | 上,下,左,右
-C-a,C-e | 先頭,末
-ESC-<,ESC->,C-v | ページ先頭,末,送り
-C-l | リフレッシュ
+C-p,C-n,C-b,C-f | up,down,left,right
+C-a,C-e | first line,end line
+ESC-<,ESC->,C-v | top of page,bottom of page,feed of page
+C-l | refresh of page
 
-* 編集
+* editing
 
-キー | 操作
+key | action
 ----------------|-----------------
-C-k | カーソル以降削除または行削除
-C-d,BackSpace | 削除
-C-y | C-kのペースト
-C-t | 文字入れ替え
-C-x | 保存
-Tab | 空白２文字分インデント
-Enter | 確定または改行
+C-d,BackSpace | position character erase
+C-k | delete after cursor or delete row
+C-y | paste of 'C-k'
+C-t | character swap
+C-x | saved
+Tab | indent of 2 single-byte spaces
+Enter | confirm or newline
+
 
